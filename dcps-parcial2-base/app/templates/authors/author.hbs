@@ -1,0 +1,29 @@
+{{outlet}}
+<h1>Author detail</h1>
+<h2>{{model.username}}</h2>
+<div>
+    <img src={{model.profilePicture}} width="30" height="30" class="d-inline-block align-top" alt=""> Meet Your Random
+    FirstName: {{model.firstName}}
+    <br>
+    LastName: {{model.lastName}}
+    <br>
+    Email: {{model.email}}
+</div>
+
+<h2>Posts</h2>
+{{#if model.posts.length}}
+<div>
+    <ul>
+        {{#each model.posts as |post|}}
+        <div>
+            <li> {{post.title}} </li>
+            <button {{action 'delete' post.id}}>Delete Post</button>
+            <br> {{post.publishedAt}}
+            <br> {{post.content}}
+        </div>
+        {{/each}}
+    </ul>
+</div>
+{{else}}
+    <div>This author don't have posts</div>
+{{/if}}

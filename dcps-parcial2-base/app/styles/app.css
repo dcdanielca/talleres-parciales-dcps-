@@ -1,0 +1,18 @@
+.authors {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.menu-authors {
+  width: 20%;
+  float: left;
+}
+
+.link-author {
+  display: block;
+  height: 2em;
+}
+
+.author-detail {
+  width: 80%;
+}
